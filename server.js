@@ -7,6 +7,8 @@ import connectDB from "./config/db.js";
 import authRoutes from "./routes/authRoutes.js";
 import userRoutes from "./routes/userRoutes.js";
 import productRoutes from "./routes/productRoutes.js";
+import studentRoutes from "./routes/studentRoutes.js";
+import { errorHandler } from "./middleware/errorMiddleware.js";
 
 dotenv.config();
 
@@ -28,10 +30,13 @@ connectDB();
 app.use("/api", authRoutes);
 app.use("/api/users", userRoutes);
 app.use("/api/products", productRoutes);
-
+app.use('/api/students', studentRoutes );
 // app.get("/",(req,res)=>{
 // res.send("Hello from server")
 // })
+
+// Error handlerC
+app.use(errorHandler);
 
 app.listen(PORT, () => {
   console.log(

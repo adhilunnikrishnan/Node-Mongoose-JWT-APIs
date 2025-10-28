@@ -57,9 +57,13 @@ export const loginUser = async (req, res) => {
     }
 
     const token = jwt.sign(
-      { id: user._id, name: user.username },
+      {
+        id: user._id,
+        name: user.username,
+        admin: user.role == "admin" ? true : false,
+      },
       process.env.JWT_SECRET,
-      { expiresIn: "3d" }
+      { expiresIn: "1d" }
     );
 
     res.status(200).json({

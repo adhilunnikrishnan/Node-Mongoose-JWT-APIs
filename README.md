@@ -21,17 +21,17 @@ A secure REST APIs built using Node.js, Express, and MongoDB with JWT authentica
 ---
 
 ## 🧭 Table of Contents
-- [⚙ Node-Mongoose-JWT-APIs](#-node-mongoose-jwt-apis)
-  - [🧭 Table of Contents](#-table-of-contents)
-  - [📖 Introduction](#-introduction)
-  - [⚙ Tech Stack](#-tech-stack)
-  - [🔋 Features](#-features)
-  - [📦 Quick Start (Setup Guide)](#-quick-start-setup-guide)
-    - [1️⃣ Clone the repository](#1️⃣-clone-the-repository)
-    - [2️⃣ Install dependencies](#2️⃣-install-dependencies)
-    - [3️⃣ Create `.env` file in the root directory](#3️⃣-create-env-file-in-the-root-directory)
-    - [4️⃣ Start the server](#4️⃣-start-the-server)
-  - [📬 Postman Collection](#-postman-collection)
+
+1. 📖[Introduction](#introduction)
+2. ⚙ [Tech Stack](#tech-stack)
+3. 🔋 [Features](#features)
+4. 📦 [Quick Start (Setup Guide)](#quick-start-setup-guide)
+   - 1️⃣ [Clone the repository](#1️⃣-clone-the-repository)
+   - 2️⃣ [Install dependencies](#2️⃣-install-dependencies)
+   - 3️⃣ [Create `.env` file in the root director](#3️⃣-create-env-file-in-the-root-directory)
+   - 4️⃣ [Start the server](#4️⃣-start-the-server)
+5. 📬 [Postman Collection](#postman-collection)
+
 
 
 ## 📖 Introduction

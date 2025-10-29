@@ -26,10 +26,6 @@ A secure REST APIs built using Node.js, Express, and MongoDB with JWT authentica
 2. ⚙ [Tech Stack](#-tech-stack)
 3. 🔋 [Features](#-features)
 4. 📦 [Quick Start (Setup Guide)](#-quick-start-setup-guide)
-   - [Clone the repository](#1-clone-the-repository)
-   - [Install dependencies](#2-install-dependencies)
-   - [Create .env file in the root directory](#3-create-env-file-in-the-root-directory)
-   - [Start the server](#4-start-the-server)
 5. 📬 [Postman Collection](#-postman-collection)
 
 ## 📖 Introduction
@@ -115,6 +111,258 @@ Server will run on:
 The Postman collection JSON file is available in the repo under the `postman` folder
 
 --- 
+## Swagger API documentation
+```
+swagger: '2.0'
+info:
+  title: REST API
+  description: Auto-generated Swagger doc
+  version: 1.0.0
+host: localhost:9002
+basePath: /
+schemes:
+  - http
+paths:
+  /api/register:
+    post:
+      description: ''
+      parameters:
+        - name: body
+          in: body
+          schema:
+            type: object
+            properties:
+              username:
+                example: any
+              email:
+                example: any
+              password:
+                example: any
+              role:
+                example: any
+              age:
+                example: any
+      responses:
+        '201':
+          description: Created
+        '400':
+          description: Bad Request
+  /api/login:
+    post:
+      description: ''
+      parameters:
+        - name: body
+          in: body
+          schema:
+            type: object
+            properties:
+              email:
+                example: any
+              password:
+                example: any
+      responses:
+        '200':
+          description: OK
+        '400':
+          description: Bad Request
+        '401':
+          description: Unauthorized
+  /api/users/:
+    get:
+      description: ''
+      parameters:
+        - name: age
+          in: query
+          type: string
+        - name: role
+          in: query
+          type: string
+      responses:
+        '200':
+          description: OK
+  /api/users/{id}:
+    get:
+      description: ''
+      parameters:
+        - name: id
+          in: path
+          required: true
+          type: string
+      responses:
+        '200':
+          description: OK
+        '400':
+          description: Bad Request
+        '404':
+          description: Not Found
+  /api/products/:
+    post:
+      description: ''
+      parameters:
+        - name: body
+          in: body
+          schema:
+            type: object
+            properties:
+              title:
+                example: any
+              author:
+                example: any
+              price:
+                example: any
+              category:
+                example: any
+              publisher:
+                example: any
+              isbn:
+                example: any
+              stock:
+                example: any
+      responses:
+        '201':
+          description: Created
+        '400':
+          description: Bad Request
+        '403':
+          description: Forbidden
+    get:
+      description: ''
+      parameters:
+        - name: category
+          in: query
+          type: string
+        - name: minPrice
+          in: query
+          type: string
+        - name: maxPrice
+          in: query
+          type: string
+      responses:
+        '200':
+          description: OK
+  /api/products/{id}:
+    patch:
+      description: ''
+      parameters:
+        - name: id
+          in: path
+          required: true
+          type: string
+        - name: body
+          in: body
+          schema:
+            type: object
+            properties:
+              title:
+                example: any
+              author:
+                example: any
+              price:
+                example: any
+              category:
+                example: any
+              publisher:
+                example: any
+              isbn:
+                example: any
+              stock:
+                example: any
+      responses:
+        '200':
+          description: OK
+        '400':
+          description: Bad Request
+        '403':
+          description: Forbidden
+        '404':
+          description: Not Found
+    delete:
+      description: ''
+      parameters:
+        - name: id
+          in: path
+          required: true
+          type: string
+      responses:
+        '200':
+          description: OK
+        '403':
+          description: Forbidden
+        '404':
+          description: Not Found
+  /api/students/:
+    post:
+      description: ''
+      parameters:
+        - name: body
+          in: body
+          schema:
+            type: object
+            properties:
+              name:
+                example: any
+              marks:
+                example: any
+              class:
+                example: any
+      responses:
+        '201':
+          description: Created
+        '400':
+          description: Bad Request
+    get:
+      description: ''
+      parameters:
+        - name: class
+          in: query
+          type: string
+      responses:
+        '200':
+          description: OK
+  /api/students/{id}/marks:
+    get:
+      description: ''
+      parameters:
+        - name: id
+          in: path
+          required: true
+          type: string
+      responses:
+        '200':
+          description: OK
+        '400':
+          description: Bad Request
+        '404':
+          description: Not Found
+  /api/students/{id}:
+    patch:
+      description: ''
+      parameters:
+        - name: id
+          in: path
+          required: true
+          type: string
+      responses:
+        '200':
+          description: OK
+        '400':
+          description: Bad Request
+        '404':
+          description: Not Found
+    delete:
+      description: ''
+      parameters:
+        - name: id
+          in: path
+          required: true
+          type: string
+      responses:
+        '200':
+          description: OK
+        '404':
+          description: Not Found
 
 
+```
+---
 If you like this project, **please ⭐ star the repo!**

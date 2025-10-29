@@ -31,6 +31,8 @@ app.use("/api", authRoutes);
 app.use("/api/users", userRoutes);
 app.use("/api/products", productRoutes);
 app.use('/api/students', studentRoutes );
+
+
 // app.get("/",(req,res)=>{
 // res.send("Hello from server")
 // })

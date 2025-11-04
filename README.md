@@ -84,8 +84,11 @@ npm install
 # Server Port
 PORT=9002
 
+# Database name
+DATABASE = Mini-Rest-API-DB
+
 # MongoDB Connection URI
-MONGO_URI=mongodb+srv://<USERNAME>:<PASSWORD>@<CLUSTER>.mongodb.net/<DATABASE_NAME>
+MONGO_URI=mongodb+srv://<USERNAME>:<PASSWORD>@<CLUSTER>.mongodb.net/
 
 # JWT Secret Key for Authentication
 JWT_SECRET=your_jwt_secret_key_here
